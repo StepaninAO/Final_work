@@ -26,7 +26,7 @@ int CountElement (string[] array)
     return size;
 }
 
-// Метод формирования нового массива с учетом уловия задачи.
+// Метод формирования нового массива с учетом условий задачи.
 string[] ConvertArray (string[] array, int size)
 {
     int j = 0, temp = 0;

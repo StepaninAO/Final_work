@@ -10,3 +10,18 @@ int sizeArray = CountElement(sourceArray);
 string[] requiredArray = new string[sizeArray];
 requiredArray = ConvertArray(sourceArray, sizeArray);
 Console.Write(string.Join(", ", requiredArray));
+
+// Метод подсчета.
+int CountElement (string[] array)
+{
+    int size = 0, temp = 0;
+    string box = "";
+    for (int i = 0; i < array.Length; i++)
+    {
+        box = array[i];
+        temp = box.Length;
+        if (temp < 4)
+            size ++;
+    }
+    return size;
+}

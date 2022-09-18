@@ -15,7 +15,7 @@ Console.Write(string.Join(", ", requiredArray));
 int CountElement (string[] array)
 {
     int size = 0, temp = 0;
-    string box = "";
+    string box = " ";
     for (int i = 0; i < array.Length; i++)
     {
         box = array[i];
@@ -24,4 +24,23 @@ int CountElement (string[] array)
             size ++;
     }
     return size;
+}
+
+// Метод формирования нового массива с учетом уловия задачи.
+string[] ConvertArray (string[] array, int size)
+{
+    int j = 0, temp = 0;
+    string box = " ";
+    string[] requiredArray = new string[size];
+    for (int i = 0; i < array.Length; i++)
+    {
+        box = array[i];
+        temp = box.Length;
+        if (temp < 4)
+        {
+            requiredArray[j] = array[i];
+            j++;
+        }
+    }
+    return requiredArray;
 }
